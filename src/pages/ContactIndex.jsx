@@ -5,7 +5,7 @@ import { ContactFilter } from '../cmps/ContactFilter.jsx'
 import { ContactAdd } from '../cmps/ContactAdd.jsx'
 import { loadContacts, removeContact, saveContact, setFilterBy } from '../store/actions/contact.actions.js'
 import { showSuccessMsgRedux } from '../store/actions/app.actions.js'
-import { SET_FILTER_BY } from '../store/reducers/contact.reducer.js'
+// import { SET_FILTER_BY } from '../store/reducers/contact.reducer.js'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
 
 export function ContactIndex() {

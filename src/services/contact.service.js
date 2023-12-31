@@ -2,7 +2,6 @@ const CONTACTS_KEY = 'myContacts'
 const PAGE_SIZE = 8
 
 import { storageService } from './async-storage.service.js'
-import { userService } from './user.service.js'
 
 export const contactService = {
     query,
