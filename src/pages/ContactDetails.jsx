@@ -4,15 +4,17 @@ import { contactService } from '../services/contact.service.js'
 import { showErrorMsg } from '../services/event-bus.service.js'
 
 export function ContactDetails() {
-  const params = useSearchParams()
-  const navigate = useNavigationType()
+  const params = useParams()
+  const navigate = useNavigate()
 
   const [currContact, setCurrContact] = useState(null)
 
   useEffect(() => {
     const { id } = params
+    console.log(id)
     contactService.getContactById(id)
       .then(contact => {
+        console.log('contact', contact)
         if (!contact) return navigate('/contact')
         setCurrContact(contact)
       })
@@ -22,7 +24,7 @@ export function ContactDetails() {
   }, [])
 
   if (!currContact) return <h4>loading</h4>
-  const { _id, name, isDone } = currContact
+  const { _id, txt, isDone } = currContact
   return (
     <div className="contact-details flex scale-in-hor-right">
       <div className="contact-data-container">

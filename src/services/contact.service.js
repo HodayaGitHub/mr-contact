@@ -61,15 +61,15 @@ function getContactById(id) {
 function save(contact) {
     if (contact._id) {
         return storageService.put(CONTACTS_KEY, contact).then((savedContact) => {
-            userService.addActivity('Updated', savedContact._id)
-            if (contact.isDone) userService.updateBalance(10)
+            // userService.addActivity('Updated', savedContact._id)
+            // if (contact.isDone) userService.updateBalance(10)
             return savedContact
         })
     } else {
         contact.isDone = false
         contact.createdAt = Date.now()
         return storageService.post(CONTACTS_KEY, contact).then((savedContact) => {
-            userService.addActivity('Added', savedContact._id)
+            // userService.addActivity('Added', savedContact._id)
             return savedContact
         })
     }
@@ -77,7 +77,7 @@ function save(contact) {
 
 function removeContact(contactId) {
     return storageService.remove(CONTACTS_KEY, contactId).then(() => {
-        userService.addActivity('Removed', contactId)
+        // userService.addActivity('Removed', contactId)
     })
 }
 

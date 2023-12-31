@@ -55,7 +55,8 @@ export function ContactIndex() {
 
   // if (!contacts.length) return <h1>No contacts to show...</h1>
   return (
-    <section className="todo-app-container flex column justify-center" style={getStyleByUser()}>
+    <section className="todo-app-container flex column justify-center">
+      <h1>contact index</h1>
       <ContactAdd onAddContact={onAddContact} />
       <div className="filter-sort-container">
         <ContactFilter onSetFilter={onSetFilter} filterBy={filterBy} />
