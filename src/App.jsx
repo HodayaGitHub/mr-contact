@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import { Route, Routes } from 'react-router'
+import { HomePage } from './pages/HomePage'
 
 
 function App() {
