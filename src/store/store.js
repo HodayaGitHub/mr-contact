@@ -1,7 +1,7 @@
 import { appReducer } from './reducers/app.reducer.js'
 import { contactReducer } from './reducers/contact.js'
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 
-const { createStore, applyMiddleware, combineReducers, compose } = Redux
 // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
