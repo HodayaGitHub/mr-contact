@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'reactRouterDOM'
+import { useParams, useNavigate } from 'react-router-dom'
 import { contactService } from '../services/contact.service.js'
 import { showErrorMsg } from '../services/event-bus.service.js'
 
