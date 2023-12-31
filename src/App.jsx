@@ -16,13 +16,11 @@ export function App() {
     <>
       <AppHeader />
 
-      <Router>
         <Routes>
           <Route element={<HomePage />} path="/" />
           <Route element={<ContactIndex />} path="/contact" />
           <Route element={<ContactDetails />} path="/contact/:id" />
         </Routes>
-      </Router>
     <Footer />
     </>
   )
