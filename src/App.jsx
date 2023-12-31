@@ -13,6 +13,8 @@ export function App() {
       <div>
         welcome to mister contact!!!
       </div>
+      <AppHeader />
+
       <Router>
         <Routes>
           <Route element={<HomePage />} path="/" />
