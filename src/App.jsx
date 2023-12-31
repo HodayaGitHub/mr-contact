@@ -21,7 +21,7 @@ export function App() {
 
         </Routes>
       </Router>
-
+    <Footer />
     </>
   )
 }
