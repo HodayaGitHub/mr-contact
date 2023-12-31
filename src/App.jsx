@@ -3,27 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import { Route, Routes } from 'react-router'
-import { HomePage } from './pages/HomePage'
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
+import { HomePage } from './pages/HomePage.jsx'
 
 
-function App() {
-
-  const [count, setCount] = useState(0)
+export function App() {
 
   return (
     <>
       <div>
         welcome to mister contact!!!
       </div>
+      <Router>
+        <Routes>
+          <Route element={<HomePage />} path="/" />
 
-      <Routes>
-      <Route element={<HomePage />} path="/" />
-
-      </Routes>
+        </Routes>
+      </Router>
 
     </>
   )
 }
 
-export default App
