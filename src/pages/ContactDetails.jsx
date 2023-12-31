@@ -1,36 +1,36 @@
-const { useState, useEffect } = React
-const { useParams, useNavigate } = ReactRouterDOM
-import { todoService } from '../services/todo.service.js'
+import { useState, useEffect } from 'react'
+import { useParams, useNavigate } from 'reactRouterDOM'
+import { contactService } from '../services/contact.service.js'
 import { showErrorMsg } from '../services/event-bus.service.js'
 
-export function TodoDetails() {
+export function ContactDetails() {
   const params = useParams()
   const navigate = useNavigate()
 
-  const [currTodo, setCurrTodo] = useState(null)
+  const [currContact, setCurrContact] = useState(null)
 
   useEffect(() => {
     const { id } = params
-    todoService.getTodoById(id)
-      .then(todo => {
-        if (!todo) return navigate('/todo')
-        setCurrTodo(todo)
+    contactService.getContactById(id)
+      .then(contact => {
+        if (!contact) return navigate('/contact')
+        setCurrContact(contact)
       })
       .catch(() => {
-        showErrorMsg('Had issues loading todo');
+        showErrorMsg('Had issues loading contact');
       })
   }, [])
 
-  if (!currTodo) return <h4>loading</h4>
-  const { _id, name, isDone } = currTodo
+  if (!currContact) return <h4>loading</h4>
+  const { _id, name, isDone } = currContact
   return (
-    <div className="todo-details flex scale-in-hor-right">
-      <div className="todo-data-container">
+    <div className="contact-details flex scale-in-hor-right">
+      <div className="contact-data-container">
         <h1>Id {_id}</h1>
         <h1>To Do: {name}</h1>
         <h1>is done? {isDone ? 'yes' : 'no'}</h1>
-        <button className="back-btn" onClick={() => navigate('/todo')}>
-          Back to todos
+        <button className="back-btn" onClick={() => navigate('/contact')}>
+          Back to contacts
         </button>
       </div>
     </div>
