@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams, useNavigationType } from 'react-router-dom'
 import { contactService } from '../services/contact.service.js'
 import { showErrorMsg } from '../services/event-bus.service.js'
 
 export function ContactDetails() {
-  const params = useParams()
-  const navigate = useNavigate()
+  const params = useSearchParams()
+  const navigate = useNavigationType()
 
   const [currContact, setCurrContact] = useState(null)
 
