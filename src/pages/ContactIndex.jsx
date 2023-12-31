@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import { useEffect, useRef, useState } from "react"
-// import { ContactList } from '../cmps/ContactList.jsx'
-// import { ContactFilter } from '../cmps/ContactFilter.jsx'
-// import { ContactAdd } from '../cmps/ContactAdd.jsx'
+import { ContactList } from '../cmps/ContactList.jsx'
+import { ContactFilter } from '../cmps/ContactFilter.jsx'
+import { ContactAdd } from '../cmps/ContactAdd.jsx'
 import { loadContacts, removeContact, saveContact, setFilterBy } from '../store/actions/contact.actions.js'
 import { showSuccessMsgRedux } from '../store/actions/app.actions.js'
 import { SET_FILTER_BY } from '../store/reducers/contact.reducer.js'
