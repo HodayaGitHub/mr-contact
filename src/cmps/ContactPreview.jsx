@@ -1,4 +1,5 @@
-const { Link } = ReactRouterDOM
+import { Link } from 'react-router-dom'
+
 
 export function ContactPreview({ contact, onUpdateContact, onRemove }) {
   function onToggleDone() {

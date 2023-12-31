@@ -1,4 +1,4 @@
-const { useState } = React
+import { useState } from 'react'
 
 export function ContactAdd({ onAddContact }) {
   const [contact, setContact] = useState({ txt: '' })
