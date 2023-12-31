@@ -10,9 +10,6 @@ export function App() {
 
   return (
     <>
-      <div>
-        welcome to mister contact!!!
-      </div>
       <AppHeader />
 
       <Router>

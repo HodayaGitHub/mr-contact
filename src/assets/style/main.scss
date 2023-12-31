@@ -1,22 +1,21 @@
-// @import 'setup/vars';
-// @import 'setup/typography.css';
-// @import 'setup/mixins';
+@import 'setup/vars';
+@import 'setup/typography';
+@import 'setup/mixins';
 
 /* Base */
-// @import 'base/base';
-// @import 'base/helpers.css';
-// @import 'base/layout';
-// @import 'base/forms.css';
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/layout';
 
 /* Components */
-// @import 'cmps/AppHeader';
+@import 'cmps/AppHeader';
 // @import 'cmps/ToggleBtn.css';
 // @import 'cmps/UserMsg.css';
 
-// @import 'cmps/ToyFilter';
-// @import 'cmps/ToySort';
-// @import 'cmps/ToyList';
-// @import 'cmps/ToyPreview';
-// @import 'cmps/toy-details';
+@import 'cmps/ToyFilter';
+@import 'cmps/ToySort';
+@import 'cmps/ToyList';
+@import 'cmps/ToyPreview';
+@import 'cmps/toy-details';
 
 // @import 'cmps/ShoppingCart.css';
