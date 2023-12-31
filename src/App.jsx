@@ -5,6 +5,7 @@ import './App.css'
 
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import { HomePage } from './pages/HomePage.jsx'
+import { Footer } from './cmps/Footer.jsx'
 
 
 export function App() {
@@ -20,7 +21,7 @@ export function App() {
 
         </Routes>
       </Router>
-
+    <Footer />
     </>
   )
 }
