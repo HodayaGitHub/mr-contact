@@ -19,7 +19,7 @@ export function App() {
 
         </Routes>
       </Router>
-    <footer />
+    <Footer />
     </>
   )
 }
